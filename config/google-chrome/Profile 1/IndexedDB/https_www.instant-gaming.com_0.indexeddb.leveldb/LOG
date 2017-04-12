@@ -1,0 +1,17 @@
+2017/03/29-23:39:02.940 16293 Reusing MANIFEST /home/bopopro/.config/google-chrome/Profile 1/IndexedDB/https_www.instant-gaming.com_0.indexeddb.leveldb/MANIFEST-000001
+2017/03/29-23:39:03.318 16293 Current memtable full; waiting...
+2017/03/29-23:39:03.318 21268 Level-0 table #5: started
+2017/03/29-23:39:03.325 21268 Level-0 table #5: 373 bytes OK
+2017/03/29-23:39:03.332 21268 Delete type=0 #3
+2017/03/29-23:39:03.332 21268 Level-0 table #7: started
+2017/03/29-23:39:03.332 21268 Level-0 table #7: 0 bytes OK
+2017/03/29-23:39:03.344 21268 Delete type=0 #4
+2017/03/29-23:39:03.344 21268 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2017/03/29-23:39:15.501 16293 Current memtable full; waiting...
+2017/03/29-23:39:15.501 21268 Level-0 table #9: started
+2017/03/29-23:39:15.507 21268 Level-0 table #9: 804 bytes OK
+2017/03/29-23:39:15.520 21268 Delete type=0 #6
+2017/03/29-23:39:15.520 21268 Level-0 table #11: started
+2017/03/29-23:39:15.520 21268 Level-0 table #11: 0 bytes OK
+2017/03/29-23:39:15.527 21268 Delete type=0 #8
+2017/03/29-23:39:15.527 21268 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

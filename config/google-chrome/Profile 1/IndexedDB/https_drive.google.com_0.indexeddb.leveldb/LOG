@@ -1,0 +1,6 @@
+2017/04/13-00:13:56.395 2122 Reusing MANIFEST /home/bopopro/.config/google-chrome/Profile 1/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2017/04/13-00:13:56.395 2122 Recovering log #133
+2017/04/13-00:13:56.406 2122 Reusing old log /home/bopopro/.config/google-chrome/Profile 1/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000133.log 
+2017/04/13-00:13:58.431 2683 Level-0 table #137: started
+2017/04/13-00:13:58.470 2683 Level-0 table #137: 1186655 bytes OK
+2017/04/13-00:13:58.483 2683 Delete type=0 #133

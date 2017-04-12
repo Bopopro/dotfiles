@@ -1,0 +1,21 @@
+{
+   "author": "knonn",
+   "background": {
+      "scripts": [ "jquery.min.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "live_off.png",
+      "default_title": "Skyyart - Offline"
+   },
+   "description": "Pour savoir quand Skyyart est en live",
+   "icons": {
+      "128": "live_on.png",
+      "64": "live_on.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg5hLBQEYOcIxYj+d9cICi9GWp1FVwi6Sk86ipecYwJbckDz5r/eNiBPvY+ar+7WnM8QH6g3oQHhfuzjOsdmth+R6iLfc69jM17IoHJJm6nSwbi4voS0QYR/qUQLFr1T8gNeOX1KcDJTeN9o/z/ESDQ48blzmAFv8JcVRkNhRLllIda96SJVClUu0e7RC5ftrassNTDAw8KCIsmg+L9Iq/X34+o7ekCXb2geVAPRpEk0I0cCUE46rL0qb9Lc767cDbXl+txEvwFaRRz04m614uU/PTVnNux+LTJ6xWC6VQyXfne5NLbYrlEK+qWfMv9Pzl6/W62FCfC5b4Zhr8E4ArQIDAQAB",
+   "manifest_version": 2,
+   "name": "Skyyart Live Extension",
+   "permissions": [ "tabs", "https://api.dailymotion.com/", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.4"
+}

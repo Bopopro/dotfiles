@@ -1,0 +1,1 @@
+var zerator_params = {"title":"ZeratoR","message":"ZeratoR est en ligne","offlineUrl":"http:\/\/www.twitch.tv\/zerator","chaines":[{"id":"zerator","type":"twitch","redirect":"http:\/\/www.twitch.tv\/zerator"}]}; if (typeof require !== "undefined") {exports.zerator_params = zerator_params;}

@@ -1,0 +1,26 @@
+{
+   "author": "Nyuw",
+   "background": {
+      "scripts": [ "app.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "ressources/lamaoff19.png",
+         "38": "ressources/lamaoff38.png"
+      },
+      "default_title": "Corobizar.com - Offline"
+   },
+   "description": "Soyez informés dès qu'un stream est disponible sur Corobizar.com",
+   "homepage_url": "http://corobizar.com",
+   "icons": {
+      "128": "ressources/logo128.png",
+      "16": "ressources/logo16.png",
+      "48": "ressources/logo48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2HK/39t8eeSRGwuT1ljaZE2vcwKh/KSFXsV9fW30PUiFkaD38grq4R18yDtQRGBNPazvBtvzbGwH8NBDupYtnD2V8TyYT78jaUYq3zSecd865xHAuBrqtxrH7jb61QsYrUwpJjvCI8fQdJvrZgd74ByWEoSKDFvkntmEB3MhZokXxKnEhw1sIZbp3JRLN6F5zaHcfye2bU+yhR71wY3G/nJD4dvu0jmzLcFWxcZVXMrxiZyQnh4IFgeRT2TjvXjjOKCKcURQiGg71zVvEMO+dKOvsi3hnRupnB+f6tE1Ht8w1a9kDtp7AB14dbdbYfpLNDRGWNd2Ene76B7iDRx2ZQIDAQAB",
+   "manifest_version": 2,
+   "name": "Corobizar.com - Alerte Live",
+   "permissions": [ "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.6"
+}
