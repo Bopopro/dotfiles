@@ -1,6 +1,0 @@
-2017/04/12-12:54:10.312 2761 Reusing MANIFEST /home/bopopro/.config/google-chrome/Profile 1/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2017/04/12-12:54:10.313 2761 Recovering log #129
-2017/04/12-12:54:10.325 2761 Reusing old log /home/bopopro/.config/google-chrome/Profile 1/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000129.log 
-2017/04/12-12:54:11.888 3365 Level-0 table #134: started
-2017/04/12-12:54:11.919 3365 Level-0 table #134: 1161154 bytes OK
-2017/04/12-12:54:11.928 3365 Delete type=0 #129

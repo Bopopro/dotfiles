@@ -1,9 +1,0 @@
-[Added Associations]
-image/jpeg=feh.desktop;darktable.desktop;gimp.desktop;
-text/plain=emacs.desktop;
-application/x-compressed-tar=gcr-viewer.desktop;Thunar.desktop;
-application/x-ms-dos-executable=org.gnome.FileRoller.desktop;
-application/zip=org.gnome.FileRoller.desktop;
-image/png=feh.desktop;
-image/gif=feh.desktop;
-application/x-7z-compressed=org.gnome.FileRoller.desktop;
