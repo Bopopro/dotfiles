@@ -1,1 +1,0 @@
-/home/bopopro/.fzf/shell/key-bindings.fish
