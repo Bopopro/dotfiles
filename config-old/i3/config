@@ -1,11 +1,7 @@
-# Base on geographer (github/geospace)
 # Gaps
-for_window [class="^.*"] border pixel 4
-for_window [class="Termite"] border pixel 3
+for_window [class="^.*"] border pixel 3
 gaps inner 10
-smart_borders on
-smart_gaps on
-gaps outer 15
+gaps outer 1
 
 # My floating friends
 for_window [window_role="pop-up"] floating enable
@@ -19,7 +15,7 @@ for_window [class="Lxappearance"] floating enable
 for_window [class="love"] floating enable
 
 # Font
-font pango: Fantasque Sans Mono 11
+font pango: Inconsolata-g 11
 
 # Borders
 new_window normal
@@ -31,7 +27,7 @@ set $mod Mod4
 exec_always --no-startup-id feh --bg-fill ~/Images/wallpaper.png
 
 # Enable animations
-exec_always --no-startup-id compton --respect-prop-shadow --config ~/.compton
+exec_always --no-startup-id compton --config ~/.compton
 
 # Enable warmer screen colors at night
 #exec --no-startup-id redshift
@@ -55,7 +51,7 @@ exec --no-startup-id dunst -config ~/.dunstrc
 exec --no-startup-id nm-applet
 
 # Terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec termite
 
 # File explorer
 bindsym $mod+U exec thunar
@@ -143,9 +139,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Define colors
-set $pimp	#78C0A8
+set $pimp	#0287ec
 set $wesh	#055c7e
-set $back	#36574C
+set $back	#7F5B5B
 
 # Colors
 client.focused		$pimp	$pimp	$pimp	$pimp	$pimp

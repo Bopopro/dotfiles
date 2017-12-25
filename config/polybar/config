@@ -1,55 +1,56 @@
 [colors]
-background = #3a3a3a
-background-alt = #3a3a3a
-foreground = #d0d0d0
-foreground-alt = #d0d0d0
-primary = #055c7e
-secondary = #5f865f
-alert = #d68787
+;background = ${xrdb:color0:#222}
+;background = #bb2d7d9a
+;background = #bb8C2386
+;background = #730837
 
-[global/wm]
-margin-top = 10%
-margin-bottom = 10%
+;background = #8C4646
+background = #4298B5
 
-[bar/bot]
-monitor-strict = false
-wm-name = i3
-monitor = eDP-1
-bottom = true
+background-alt = #6E9ECF
+;background-alt = #57889a
 
-width = 1920
+;foreground = ${xrdb:color7:#222}
+foreground = #FFF
+foreground-alt = #BBE
+
+primary = #FCEBB6
+;primary = #6E9ECF
+secondary = #9A69A2
+alert = #bd2c40
+
+[bar/khabar]
+width = 100%
 height = 32
-;offset-x = 10
-;offset-y = 10
-;override-redirect = true
+fixed-center = true
+
+line-size = 0
+line-color = #f00
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-top-size = 2
-;border-bottom-size = 2
-;border-left-size = 2
-;border-right-size = 2
-border-top-color = ${colors.primary}
-;border-bottom-color = ${colors.primary}
-;border-left-color = ${colors.primary}
-;border-right-color = ${colors.primary}
+padding-left = 2
+padding-right = 2
 
-spacing = 1
-padding-left = 1
-padding-right = 1
 module-margin-left = 1
-module-margin-right = 1
+module-margin-right = 2
 
-font-0 = xos4 Terminus:size=15;3
-font-1 = FontAwesome:size=11;4
+font-0 = fixed:pixelsize=11;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=11;1
+font-3 = FontAwesome:size=11;1
+font-4 = Meslo LG L DZ for Powerline:size=11;1
 
 modules-left = i3
-modules-center = date
-modules-right = cpu pacman volume backlight battery
+modules-center = date music
+modules-right =  mail xbacklight volume battery
 
 tray-position = right
-tray-padding = 2
+;tray-padding = 2
+;tray-transparent = true
+tray-background = ${colors.background}
+
 
 [module/i3]
 type = internal/i3
@@ -59,16 +60,16 @@ index-sort = true
 label-mode-foreground = ${colors.primary}
 
 label-focused-font = 4
-label-unfocused-font = 4
+label-unfocused-font = 3
 label-urgent-font = 4
-label-visible-font = 4 
+label-visible-font = 4
 
-label-focused = 
+label-focused = " ⧫ "
 label-focused-padding = 1
 
-label-unfocused = 
+label-unfocused = " ◊ "
 label-unfocused-padding = 1
-label-unfocused-underlinde = ${colors.foreground}
+label-unfocused-foreground = ${colors.primary}
 
 label-urgent = 
 label-urgent-padding = 1
@@ -78,25 +79,80 @@ label-visible = 
 label-visible-foreground = ${colors.foreground}
 label-visible-padding = 1
 
+;ws-icon-0 = 1;
+;ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-3 = 4;
+;ws-icon-4 = 5;
+;ws-icon-default = 
+
+[module/music]
+type = custom/script
+interval = 2
+format-underline = ${colors.secondary}
+
+label = %output:0:45:...%
+exec = ~/.config/polybar/mpris.sh
+
+[module/mail]
+type = custom/script
+interval = 5
+format = <label>
+format-prefix = "  "
+format-prefix-foreground = #FFF
+exec = ~/.config/polybar/mail
+
+;[module/xbacklight]
+;type = internal/backlight
+;card = intel_backlight
+;
+;format = <ramp>
+;ramp-0 = 🌕
+;ramp-1 = 🌔
+;ramp-2 = 🌓
+;ramp-3 = 🌒
+;ramp-4 = 🌑
+
+
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
-date = %d-%m-%Y
+date = " %d %B %Y :: "
+time = "%H:%M:%S  "
 
-time = %H:%M
-
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.primary}
+label = %date% %time%
 
-label =%date% %time%
+[module/volume]
+type = internal/volume
 
-[module/cpu]
-type = internal/cpu
-interval= 2
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${root.foreground}
 
-format = <label>
-label =  %percentage%%
+format-muted-prefix = " "
+format-muted-foreground = #D2E6EC
+label-muted = "MUTED"
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary}
+bar-volume-foreground-2 = ${colors.primary}
+bar-volume-foreground-3 = ${colors.primary}
+bar-volume-foreground-4 = ${colors.primary}
+bar-volume-foreground-5 = #E032AF
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -104,15 +160,11 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging><label-charging>
-format-charging-underline = #ffb52a
-
-format-discharging = <ramp-capacity><label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-charging = <ramp-capacity> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -123,21 +175,17 @@ animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 500
+animation-charging-framerate = 750
 
-[module/backlight]
-type = internal/backlight
-format = <label>%
-label =  %percentage%
-card = intel_backlight
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
 
-[module/volume]
-type = internal/volume
-master-mixer = Master
-format-volume = <label-volume>%
-label-volume =  %percentage%
+[global/wm]
+margin-top = 5
+margin-bottom = 5
 
-[module/pacman]
-type = custom/script
-exec = ~/.dotfiles/scripts/getpacmanupdates.sh
-interval = 10
+; vim:ft=dosini

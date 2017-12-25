@@ -5,8 +5,8 @@ alias ll="ls -l"
 alias tree="ls --tree"
 alias ne="emacs -nw"
 alias vi="vim"
-alias nv="nvim"
-alias nvq="nvim-qt"
+alias valgrind="colour-valgrind"
+alias make="colormake"
 
 #Norman
 alias norman='python ~/python/HelpMeNorman.py -nocheat -verbose -return -printline -score'
