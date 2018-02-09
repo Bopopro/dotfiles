@@ -5,7 +5,7 @@
 ;background = #730837
 
 ;background = #8C4646
-background = #4298B5
+background = #cc444444
 
 background-alt = #6E9ECF
 ;background-alt = #57889a
@@ -23,6 +23,9 @@ alert = #bd2c40
 width = 100%
 height = 32
 fixed-center = true
+
+border-bottom-size = 2
+border-color = #2E0009
 
 line-size = 0
 line-color = #f00
@@ -102,23 +105,23 @@ format-prefix = "  "
 format-prefix-foreground = #FFF
 exec = ~/.config/polybar/mail
 
-;[module/xbacklight]
-;type = internal/backlight
-;card = intel_backlight
-;
-;format = <ramp>
-;ramp-0 = 🌕
-;ramp-1 = 🌔
-;ramp-2 = 🌓
-;ramp-3 = 🌒
-;ramp-4 = 🌑
+[module/xbacklight]
+type = internal/backlight
+card = intel_backlight
+
+format = <ramp>
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
 
 
 [module/date]
 type = internal/date
 interval = 1
 
-date = " %d %B %Y :: "
+date = "%d %B %Y  - "
 time = "%H:%M:%S  "
 
 format-prefix = 
@@ -146,7 +149,7 @@ bar-volume-foreground-4 = ${colors.primary}
 bar-volume-foreground-5 = #E032AF
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
-bar-volume-indicator = 
+bar-volume-indicator = |
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
 bar-volume-fill-font = 2
@@ -175,7 +178,7 @@ animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
+animation-charging-framerate = 20
 
 [settings]
 screenchange-reload = true

@@ -6,8 +6,16 @@ end
 # Term compatibility
 set TERM xterm
 
+# Epitech path for nvim
+setenv EPITECH_PATH "/home/bopopro/tek"
+
 # Default editor
-set EDITOR vim
+set EDITOR nvim
+
+# Prompt colors
+# Seoul 256
+set dangerous_colors 3a3a3a 4e4e4e 626262 d0d0d0 d8af5f ffd787 d68787 d75f87 85add4 add4fb 5f865f 87af87
+setenv fish_color_normal red
 
 # Colored man
 set -x LESS_TERMCAP_mb (printf "\033[01;31m")
@@ -27,11 +35,9 @@ set FZF_ALT_C_OPTS "--preview 'tree -C {} | head -200'"
 function cm
   mkdir -p build
   cd build
-  cmake ..; and make
+  cmake ..; and make -j4
   cd ..
 end
-
-xset r rate 200 30
 
 # aliases
 source ~/.config/fish/aliases

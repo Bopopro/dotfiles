@@ -81,3 +81,8 @@ alias gm='git merge'
 alias gp='git push'
 alias grb='git rebase'
 alias gst='git status'
+
+#Pigmentize
+alias kat='pygmentize'
+
+abbr -a sl 'ls'

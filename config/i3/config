@@ -3,8 +3,8 @@
 for_window [class="^.*"] border pixel 4
 for_window [class="Termite"] border pixel 3
 gaps inner 10
-smart_borders on
-smart_gaps on
+#smart_borders on
+#smart_gaps on
 gaps outer 15
 
 # My floating friends
@@ -34,7 +34,10 @@ exec_always --no-startup-id feh --bg-fill ~/Images/wallpaper.png
 exec_always --no-startup-id compton --respect-prop-shadow --config ~/.compton
 
 # Enable warmer screen colors at night
-#exec --no-startup-id redshift
+exec --no-startup-id redshift
+
+# Enable warmer screen colors at night
+exec --no-startup-id xset r rate 300 30
 
 # Mouse support for floating windows
 floating_modifier $mod
@@ -143,9 +146,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Define colors
-set $pimp	#78C0A8
+set $pimp	#660718
 set $wesh	#055c7e
-set $back	#36574C
+set $back	#2E0009
 
 # Colors
 client.focused		$pimp	$pimp	$pimp	$pimp	$pimp
@@ -156,8 +159,8 @@ client.placeholder	$back	$back	$back	$back	$back
 client.background	$back
 
 # Brightness fn keys
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -inc -5%"
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc +5%"
+bindsym XF86MonBrightnessDown exec --no-startup-id "light -inc -5%"
+bindsym XF86MonBrightnessUp exec --no-startup-id "light -inc +5%"
 
 # Sound fn keys
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master 3%-"
